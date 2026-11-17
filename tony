@@ -1,0 +1,69 @@
+# STEP 1: Update Kali Linux packages
+sudo apt update
+
+# STEP 2: Install Wireshark
+sudo apt install wireshark -y
+
+# STEP 3: Configure Wireshark permissions
+sudo dpkg-reconfigure wireshark-common
+
+# STEP 4: Add current user to Wireshark group
+sudo usermod -aG wireshark $USER
+
+# STEP 5: Check Wireshark version
+wireshark --version
+
+# STEP 6: Display network interfaces
+ip a
+
+# STEP 7: Open Wireshark application
+wireshark
+
+# STEP 8: Generate HTTP traffic
+curl http://neverssl.com
+
+# STEP 9: Generate DNS traffic
+nslookup google.com
+
+# STEP 10: Generate another DNS query
+nslookup example.com
+
+# STEP 11: Install FTP server and client
+sudo apt install vsftpd ftp -y
+
+# STEP 12: Start FTP server
+sudo systemctl start vsftpd
+
+# STEP 13: Enable FTP service
+sudo systemctl enable vsftpd
+
+# STEP 14: Check FTP server status
+sudo systemctl status vsftpd
+
+# STEP 15: Display Kali Linux IP address
+hostname -I
+
+# STEP 16: Connect to local FTP server
+ftp 127.0.0.1
+
+# Display current directory
+pwd
+
+# List available files
+ls
+
+# Display directory details
+dir
+
+# Disconnect FTP server
+quit
+
+Wireshark Packet Capture Started.
+
+HTTP Packets Captured Successfully.
+DNS Packets Captured Successfully.
+FTP Connection Established.
+FTP Commands and Responses Captured.
+
+Network Packets Analysed Successfully.
+Capture Saved: Network_Analysis.pcapng
